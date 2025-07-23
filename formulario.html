@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-green"> <div class="form-container">
+            <h1>Formulario de registro</h1>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" id="apellidos" name="apellidos" required>
+                </div>
+
+                <div class="form-group gender-options">
+                    <label>Sexo:</label>
+                    <input type="radio" id="hombre" name="sexo" value="hombre" checked>
+                    <label for="hombre">hombre</label>
+                    <input type="radio" id="mujer" name="sexo" value="mujer">
+                    <label for="mujer">mujer</label>
+                </div>
+
+                <div class="form-group">
+                    <label for="correo">Correo:</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+
+                <div class="form-group checkbox-item">
+                    <input type="checkbox" id="novedades" name="novedades" value="si" checked>
+                    <label for="novedades">Deseo recibir información sobre novedades y ofertas</label>
+                </div>
+
+                <div class="form-group checkbox-item">
+                    <input type="checkbox" id="condiciones" name="condiciones" value="aceptado" required>
+                    <label for="condiciones">Declaro haber leído y aceptar las condiciones generales del programa y la normativa sobre protección de datos</label>
+                </div>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+</body>
+</html>
