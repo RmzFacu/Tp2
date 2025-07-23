@@ -1,0 +1,48 @@
+body {
+    font-family: "Inter", sans-serif; /* Usando la fuente Inter */
+    margin: 0;
+    background-color: #f8f9fa; /* Un color de fondo suave */
+}
+
+.navbar {
+    border-bottom-left-radius: 10px; /* Bordes redondeados en la parte inferior de la navbar */
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para la navbar */
+}
+
+.container-fluid {
+    padding-left: 1.5rem; /* Más padding para los lados */
+    padding-right: 1.5rem;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #007bff; /* Color de marca */
+}
+
+.nav-link {
+    transition: color 0.3s ease; /* Transición suave para los enlaces */
+}
+
+.nav-link:hover {
+    color: #0056b3; /* Color al pasar el ratón */
+}
+
+.dropdown-menu {
+    border-radius: 8px; /* Bordes redondeados para el menú desplegable */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-control {
+    border-radius: 5px; /* Bordes redondeados para el input de búsqueda */
+}
+
+.btn-outline-success {
+    border-radius: 5px; /* Bordes redondeados para el botón de búsqueda */
+    transition: all 0.3s ease;
+}
+
+.btn-outline-success:hover {
+    background-color: #28a745;
+    color: white;
+}
