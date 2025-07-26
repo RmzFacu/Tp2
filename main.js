@@ -2,34 +2,34 @@ const adelante = document.getElementById("adelante");
 const atras = document.getElementById("atras");
 const centro = document.getElementById("centro");
 
-let waifus = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"]; // en la misma carpeta
+let waifus = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"];
 let contador = 0;
 
-// Crear la imagen
-let imagen = document.createElement("img");
-imagen.src = waifus[contador];
-imagen.classList.add("image");
-centro.appendChild(imagen);
+// Crear las imágenes
+let imagenes = waifus.map((archivo) => {
+    let img = document.createElement("img");
+    img.src = `imagenes/${archivo}`;
+    img.classList.add("image");
+    img.style.display = "none"; // Ocultar todas menos la activa
+    return img;
+});
 
-// Función para actualizar la imagen
-function mostrarImagen(index) {
-  imagen.src = waifus[index];
-}
+// Agregar todas las imágenes al contenedor
+imagenes.forEach((img) => centro.appendChild(img));
 
-// Avanzar imagen
+// Mostrar la primera imagen
+imagenes[contador].style.display = "block";
+
+// Botón adelante
 adelante.addEventListener("click", () => {
-  contador = (contador + 1) % waifus.length; // vuelve al inicio si llega al final
-  mostrarImagen(contador);
+    imagenes[contador].style.display = "none";
+    contador = (contador + 1) % imagenes.length;
+    imagenes[contador].style.display = "block";
 });
 
-// Retroceder imagen
+// Botón atrás
 atras.addEventListener("click", () => {
-  contador = (contador - 1 + waifus.length) % waifus.length; // vuelve al final si va antes del inicio
-  mostrarImagen(contador);
+    imagenes[contador].style.display = "none";
+    contador = (contador - 1 + imagenes.length) % imagenes.length;
+    imagenes[contador].style.display = "block";
 });
-
-// Si querés usar un input para buscar algo en el futuro
-function search() {
-  const input = document.getElementById("busqueda").value;
-  console.log("Buscando:", input);
-}
