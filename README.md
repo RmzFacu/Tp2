@@ -8,6 +8,7 @@ Este repositorio contiene el desarrollo del **Trabajo Práctico N°2** de la mat
 - Nicolás Danunnzio  
 - Facundo Ruiz  
 - Alan Román  
+- Jose martines
 
 ## Descripción del trabajo
 
